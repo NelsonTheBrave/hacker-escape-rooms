@@ -2,12 +2,13 @@
 
 /* Variables for color */
 :root {
---purple: #011827;
+  --purple: #011827;
+  --red: rgba(227, 23, 10, 1);
+  --blue: rgba(138, 207, 229, 1);
 }
 
-
 /* For resetting default styling */
-* { 
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -54,24 +55,24 @@ nav {
   display: none;
 }
 
-
-
 /* ███████████████ MAIN ███████████████ */
 .topImage {
   /* max-width: 480px; */
   width: 100%;
+  margin-bottom: 36px;
 }
 
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BUTTON BAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
 .onsiteBtn {
-  margin: 36px auto 0 auto;
+  margin: 0px auto 0 auto;
   display: block;
   width: 308px;
+  max-width: 80%;
   height: 66px;
   font-weight: 700;
   font-size: 24px;
-  color: rgba(1, 24, 39, 1);
-  background: rgba(138, 207, 229, 1);
+  color: var(--purple);
+  background: var(--blue);
   border-radius: 4px;
 }
 
@@ -99,11 +100,6 @@ nav {
   height: 72px;
 }
 
-.quote1__texts {
-    /* display: flex;
-    flex-direction: column; */
-}
-
 .quote1__quoteText {
   margin-left: 22px;
   margin-right: 25px;
@@ -112,9 +108,9 @@ nav {
 }
 
 .quote1__name {
-     margin-left: 21px;
-     margin-top: 4px;
-     font-size: 18px;
+  margin-left: 21px;
+  margin-top: 4px;
+  font-size: 18px;
 }
 
 /* ░░░░░░░░░░░░░░░ QUOTE 2 ░░░░░░░░░░░░░░░ */
@@ -125,9 +121,184 @@ nav {
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ POPULAR CHALLENGES ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
 .popularChallenges {
   margin-top: 105px;
+  margin-bottom: 44px;
 }
 
 .popularChallenges__title {
-    font-size: 32px;
-    text-align: center;
+  font-size: 32px;
+  text-align: center;
 }
+
+/* ░░░░░░░░░░░░░░░ CHALLENGE 1 ░░░░░░░░░░░░░░░ */
+
+.popularChallenges__challenge1 {
+  width: 80%;
+  max-width: 363px;
+  margin: 44px auto 0 auto;
+  border: 0px solid white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.popularChallenges__challenge1__img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.popularChallenges__challenge1__lowerWrapper {
+  margin: 0px auto;
+  padding-left: 17px;
+  padding-bottom: 12px;
+}
+
+.popularChallenges__challenge1__title {
+  margin-top: 12px;
+  font-size: 28px;
+}
+
+.popularChallenges__challenge1__rating {
+  display: flex;
+}
+
+.popularChallenges__challenge1__rating__stars {
+  display: flex;
+}
+
+.popularChallenges__challenge1__rating__stars i {
+  display: block;
+  width: 23px;
+  margin-right: 3px;
+  background-repeat: no-repeat;
+}
+.star--filled {
+  background: url(img/filledStar.png);
+}
+.star--empty {
+  background: url(img/emptyStar.png);
+}
+
+.popularChallenges__challenge1__rating__participants {
+  display: inline;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.popularChallenges__challenge1__text {
+  margin-top: 23px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.popularChallenges__challenge1__button {
+  margin-top: 25px;
+  margin-right: 17px;
+  margin-left: auto;
+  width: 180px;
+  height: 44px;
+  background-color: var(--red);
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  display: block;
+}
+
+/* ░░░░░░░░░░░░░░░ CHALLENGE 2 ░░░░░░░░░░░░░░░ */
+.popularChallenges__challenge2 {
+  display: none;
+}
+
+/* ░░░░░░░░░░░░░░░ CHALLENGE 3 ░░░░░░░░░░░░░░░ */
+.popularChallenges__challenge3 {
+  display: none;
+}
+
+/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BUTTON BAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
+
+/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ OUR STORY ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
+.ourStory {
+  margin-top: 56px;
+  padding-top: 95px;
+  padding-bottom: 91px;
+  background-color: var(--purple);
+}
+
+.ourStory__text {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.ourStory__btn {
+  display: block;
+  margin: 60px auto 0 auto;
+  width: 306px;
+  height: 66px;
+  font-weight: 700;
+  font-size: 24px;
+  background-color: var(--purple);
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+}
+
+/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ PLAY WITH FRIENDS ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
+.imgAbovePlayWithFriends {
+  width: 100%;
+}
+
+.playWithFriends {
+  padding: 0 20px 64px 20px;
+}
+
+.playWithFriends__title {
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: 700;
+}
+.playWithFriends__text {
+  margin-top: 40px;
+  font-size: 24px;
+}
+.playWithFriends__btn.onsiteBtn {
+  background-color: var(--red);
+  margin-top: 50px;
+  margin-left: 0;
+  color: white;
+}
+
+/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ PLAY ONLINE ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
+.playOnline {}
+.playOnline__img {}
+.playOnline__title {}
+.playOnline__text {}
+.playOnline__btn {}
+
+/* ███████████████ FOOTER ███████████████ */
+
+footer {
+
+}
+
+.footerTitle {
+
+}
+
+.footerText {
+
+}
+
+.links {}
+.links__title {
+
+}
+.links__list {}
+
+.followUs {}
+.followUs__title {
+
+}
+.followUs__list {}
+
+
+
