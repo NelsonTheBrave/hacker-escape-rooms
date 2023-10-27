@@ -16,8 +16,13 @@
   font: inherit;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
 /* ███████████████ HEADER ███████████████ */
@@ -246,7 +251,7 @@ nav {
 .imgAbovePlayWithFriends {
   width: 100%;
 }
-
+q
 .playWithFriends {
   padding: 0 20px 64px 20px;
 }
