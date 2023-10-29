@@ -19,8 +19,22 @@
 li {
   list-style: none;
 }
+
+/* Unnecessary? */
 img {
-display: block;
+  display: block;
+  width: 100%;
+}
+
+button {
+  margin: 0 auto 0 auto;
+  display: block;
+  width: 308px;
+  height: 66px;
+  font-weight: 700;
+  font-size: 24px;
+  max-width: 80%;
+  border-radius: 4px;
 }
 
 body {
@@ -38,7 +52,6 @@ header {
 }
 
 .logo {
-  display: block;
   height: 82px;
   width: 128px;
   font-family: "Monofett", monospace;
@@ -63,26 +76,18 @@ nav {
 
 /* ███████████████ MAIN ███████████████ */
 .topImage {
-  width: 100%;
   margin-bottom: 36px;
 }
 
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BUTTON BAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
 .onsiteBtn {
-  margin: 0 auto 0 auto;
-  display: block;
-  width: 308px;
-  max-width: 80%;
-  height: 66px;
-  font-weight: 700;
-  font-size: 24px;
   color: var(--purple);
   background: var(--blue);
-  border-radius: 4px;
+  margin-top: 25px;
 }
 
 .onlineBtn {
-  margin: 30px auto 0 auto;
+  margin: 10px auto 0 auto;
   display: block;
   font-size: 16px;
   font-weight: 700;
@@ -96,7 +101,7 @@ nav {
 /* ░░░░░░░░░░░░░░░ QUOTE 1 ░░░░░░░░░░░░░░░ */
 .quote1 {
   display: flex;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .quote1__head {
@@ -124,52 +129,57 @@ nav {
 }
 
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ POPULAR CHALLENGES ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
-.popularChallenges {
-  margin-top: 105px;
-  margin-bottom: 44px;
-}
-
 .popularChallenges__title {
+  margin-top: 105px;
   font-size: 32px;
   text-align: center;
 }
 
-/* ░░░░░░░░░░░░░░░ CHALLENGE 1 ░░░░░░░░░░░░░░░ */
+.popularChallenges {
+  padding-bottom: 19px;
+  padding-left: 48px;
+  padding-right: 8px;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
 
-.popularChallenges__challenge1 {
-  width: 80%;
-  max-width: 363px;
-  margin: 44px auto 0 auto;
+.popularChallenges__challenge {
+  width: 85%;
+  max-width: 423px;
+  flex: none;
+  margin: 44px 38px 0 0px;
   border: 0px solid white;
   border-radius: 8px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  scroll-snap-align: center;
 }
 
-.popularChallenges__challenge1__img {
+.popularChallenges__challenge__img {
   width: 100%;
   border-radius: 8px 8px 0 0;
 }
 
-.popularChallenges__challenge1__lowerWrapper {
+.popularChallenges__challenge__lowerWrapper {
   margin: 0px auto;
   padding-left: 17px;
   padding-bottom: 12px;
 }
 
-.popularChallenges__challenge1__title {
+.popularChallenges__challenge__title {
   margin-top: 12px;
   font-size: 28px;
 }
 
-.popularChallenges__challenge1__rating {
+.popularChallenges__challenge__rating {
   display: flex;
 }
 
-.popularChallenges__challenge1__rating__stars {
+.popularChallenges__challenge__rating__stars {
   display: flex;
 }
 
-.popularChallenges__challenge1__rating__stars i {
+.popularChallenges__challenge__rating__stars i {
   display: block;
   width: 23px;
   margin-right: 3px;
@@ -182,39 +192,27 @@ nav {
   background: url(img/emptyStar.png);
 }
 
-.popularChallenges__challenge1__rating__participants {
+.popularChallenges__challenge__rating__participants {
   display: inline;
   font-size: 14px;
   margin-left: 10px;
 }
 
-.popularChallenges__challenge1__text {
+.popularChallenges__challenge__text {
   margin-top: 23px;
   margin-right: 10px;
   font-size: 18px;
 }
 
-.popularChallenges__challenge1__button {
+.popularChallenges__challenge__button {
   margin-top: 25px;
   margin-right: 17px;
-  margin-left: auto;
   width: 180px;
   height: 44px;
   background-color: var(--red);
-  border-radius: 8px;
+  /* border-radius: 8px; HUUUUUUH!? */
   color: white;
-  font-weight: 700;
-  display: block;
-}
-
-/* ░░░░░░░░░░░░░░░ CHALLENGE 2 ░░░░░░░░░░░░░░░ */
-.popularChallenges__challenge2 {
-  display: none;
-}
-
-/* ░░░░░░░░░░░░░░░ CHALLENGE 3 ░░░░░░░░░░░░░░░ */
-.popularChallenges__challenge3 {
-  display: none;
+  font-size: 16px;
 }
 
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BUTTON BAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
@@ -235,24 +233,13 @@ nav {
 }
 
 .ourStory__btn {
-  display: block;
-  margin: 60px auto 0 auto;
-  width: 306px;
-  height: 66px;
-  max-width: 80%;
-  font-weight: 700;
-  font-size: 24px;
+  margin-top: 60px;
   background-color: var(--purple);
   color: var(--blue);
   border: 2px solid var(--blue);
-  border-radius: 4px;
 }
 
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ PLAY WITH FRIENDS AND ONLINE ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
-.playWithFriendsAndOnline img {
-  width: 100%;
-}
-
 .playWithFriendsAndOnline section {
   padding: 0 20px 64px 20px;
 }
@@ -266,36 +253,39 @@ nav {
   margin-top: 40px;
   font-size: 24px;
 }
-.playWithFriendsAndOnline button.onsiteBtn {
+.playWithFriendsAndOnline button {
   background-color: var(--red);
   margin-top: 50px;
   margin-left: 0;
   color: white;
 }
 
+
 /* ███████████████ FOOTER ███████████████ */
 
 footer {
-background-color: var(--purple);
-margin-top: 38px;
-color: white;
-padding: 64px 20px 70px 20px;
-font-size: 18px;
+  background-color: var(--purple);
+  margin-top: 38px;
+  color: white;
+  padding: 64px 20px 70px 20px;
+  font-size: 18px;
 }
 
 .footerTitle {
-font-weight: 700;
+  font-weight: 700;
 }
 
 .footerText {
-margin-top: 7px;
+  margin-top: 7px;
 }
 
-.links {}
+.links {
+}
+
 .links__title {
-margin-top: 40px;
-font-size: 18px;
-font-weight: 700;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 700;
 }
 .links__list {
   margin-top: 7px;
@@ -309,8 +299,4 @@ font-weight: 700;
 }
 .followUs__list {
   margin-top: 7px;
-
 }
-
-
-
