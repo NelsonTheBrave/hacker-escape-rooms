@@ -21,7 +21,13 @@
 li {
   list-style: none;
 }
-
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover {
+  color: chocolate;
+}
 /* Unnecessary? */
 img {
   display: block;
@@ -38,6 +44,10 @@ button {
   max-width: 80%;
   border-radius: 4px;
 }
+button:hover {
+  cursor: pointer;
+}
+
 
 body {
   font-family: "Roboto", sans-serif;
