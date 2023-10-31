@@ -1,0 +1,71 @@
+[33mcommit 6b5afb45c6bb3047fc79de5d2050832821e29aed[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Tue Oct 31 09:06:40 2023 +0100
+
+    comparing hero styling versions
+
+[33mcommit 2ed7d365e0963b5884233cda02dc33453c804a33[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Tue Oct 31 09:04:03 2023 +0100
+
+    working on hero image
+
+[33mcommit 1eeeb914553200dd64dbead2c301a73419adc589[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Sun Oct 29 20:06:05 2023 +0100
+
+    good way into the desktop version
+
+[33mcommit db220f64f0c190bd37e7f6fb08917769ab3ef39d[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Sun Oct 29 14:52:29 2023 +0100
+
+    tweaking margins
+
+[33mcommit 0abeb2ef1a7110c63a38260c05181a3267676a7d[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Sun Oct 29 14:41:28 2023 +0100
+
+    More mobile css tweaks including horisontal scroll
+
+[33mcommit 88d42b5d85b078ab25db4ad2ea378fd25a66660b[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Fri Oct 27 10:09:34 2023 +0200
+
+    First CSS mobile completed, needs DRY-adaptation
+
+[33mcommit fdbafd2381a476bbb268f0bafc86ca07efc5d255[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Fri Oct 27 09:18:26 2023 +0200
+
+    still fixing white column
+
+[33mcommit 1b3cfc1929721229ab670f86b8ca9531563e98cf[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Fri Oct 27 09:08:42 2023 +0200
+
+    trying to get rid of white space
+
+[33mcommit 74ab1f80e93332f6c9a3254ec4ee46908bd3204c[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Thu Oct 26 19:43:11 2023 +0200
+
+    More css and images
+
+[33mcommit c9b66db3f560319dc107d77fb90ba3486dec73aa[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Thu Oct 26 17:35:17 2023 +0200
+
+    Added more design I guess
+
+[33mcommit 345e6499f45aa16d57eb55eb31d399ce035d66ba[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Thu Oct 26 17:33:39 2023 +0200
+
+    Started adding mobile design
+
+[33mcommit fe3c0c608bf3f47928f8fe06f05b812452b95633[m
+Author: Nelson <sherman.erik@gmail.com>
+Date:   Wed Oct 25 18:31:09 2023 +0200
+
+    Created the basic HTML structure

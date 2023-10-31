@@ -26,7 +26,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: chocolate;
+  color: var(--blue);
 }
 /* Unnecessary? */
 img {
@@ -47,7 +47,6 @@ button {
 button:hover {
   cursor: pointer;
 }
-
 
 body {
   font-family: "Roboto", sans-serif;
@@ -119,18 +118,15 @@ header h1 {
 }
 
 /* ███████████████ MAIN ███████████████ */
-.topImageSmall {
+.topImage {
   margin-bottom: 36px;
 }
-.topImageLarge {
-  display: none;
-}
 @media screen and (min-width: 800px) {
-  .topImageSmall {
-    display: none;
-  }
-  .topImageLarge {
-    display: inline;
+  .topImage {
+    height: 38vw;
+    min-height: 450px;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
@@ -157,7 +153,8 @@ header h1 {
     justify-content: space-between;
   }
   .translateBtn {
-    transform: translateY(-38px);
+    transform: translateY(-65px);
+    margin-bottom: -30px;
   }
   .buttons__onsiteBtn {
     margin: 0 auto 0 8.5px;
@@ -296,6 +293,8 @@ header h1 {
   display: flex;
 }
 
+
+
 .popularChallenges__challenge__rating__stars {
   display: flex;
 }
@@ -318,6 +317,12 @@ header h1 {
   font-size: 14px;
   margin-left: 10px;
 }
+@media screen and (min-width: 800px) {
+  .popularChallenges__challenge__rating__participants {
+    margin-right: 11px;
+    margin-left: auto;
+  }
+}
 
 .popularChallenges__challenge__text {
   margin-top: 23px;
@@ -337,7 +342,6 @@ header h1 {
 }
 
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BUTTON BAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
-
 
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ OUR STORY ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
 .ourStory {
@@ -362,9 +366,8 @@ header h1 {
 @media screen and (min-width: 800px) {
   .ourStory {
     margin-top: 87px;
-  height: 500px;
-  padding-top: 123px;
-
+    height: 500px;
+    padding-top: 123px;
   }
   .ourStory__text {
     display: block;
@@ -375,7 +378,6 @@ header h1 {
     margin-top: 42px;
   }
 }
-
 
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ PLAY WITH FRIENDS AND ONLINE ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
 .playWithFriendsAndOnline section {
@@ -397,6 +399,46 @@ header h1 {
   margin-left: 0;
   color: white;
 }
+@media screen and (min-width: 800px) {
+  .playWithFriendsAndOnline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 37.5vw 37.5vw;
+    margin-bottom: 183px;
+  }
+  .playWithFriendsAndOnline img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .imgAbovePlayWithFriends {
+    grid-column: 1 / 2;
+  }
+  .imgAbovePlayOnline {
+    grid-column: 2 / 3;
+  }
+  .playOnline {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  .playWithFriendsAndOnline section {
+    width: 65%;
+    margin: auto;
+    padding: 0;
+  }
+  .playWithFriendsAndOnline h3 {
+    margin-top: 0;
+  }
+  .playWithFriendsAndOnline p {
+    margin-top: 25px;
+    font-size: 24px;
+  }
+  .playWithFriendsAndOnline button {
+    background-color: var(--red);
+    margin-top: 25px;
+    margin-left: 0;
+    color: white;
+  }
+}
 
 /* ███████████████ FOOTER ███████████████ */
 
@@ -416,9 +458,6 @@ footer {
   margin-top: 7px;
 }
 
-.links {
-}
-
 .links__title {
   margin-top: 40px;
   font-size: 18px;
@@ -428,12 +467,48 @@ footer {
   margin-top: 7px;
 }
 
-.followUs {
-}
 .followUs__title {
   margin-top: 47px;
   font-weight: 700;
 }
 .followUs__list {
   margin-top: 7px;
+}
+@media screen and (min-width: 800px) {
+  footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 146px 0 174px 0;
+  }
+
+  .footerTitle {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .footerText {
+    margin: 0 auto;
+    width: 65%;
+    margin-top: 7px;
+    grid-column: 1;
+  }
+  .links__title {
+    margin-top: 0px;
+    grid-row: 1;
+    grid-column: 2;
+    width: 40%;
+    margin: 0 auto;
+  }
+  .links__list {
+    width: 40%;
+    margin: 7px auto 0 auto;
+  }
+
+  .followUs__title {
+    grid-column: 3;
+    grid-row: 1;
+    margin-top: 0px;
+  }
+  .followUs__list {
+  }
 }
