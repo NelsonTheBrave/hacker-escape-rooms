@@ -1,0 +1,42 @@
+███████████████  ██████████████████████████████  ██████████████████████████████  ███████████████
+███████████████ ORDLIG INLÄMNING ███████████████
+
+Uppgiften innefattar även en skriftlig inlämning samt muntlig avstämning där studenten ska motivera val av verktyg och hur man valt att strukturera sin kod.
+
+Motivera skriftligt val av tekniker och verktyg
+Beskriv skriftligt hur du strukturerat din kod
+
+Text där man motiverar val av tekniker och hur man strukturerat sin kod, minst ca 200 ord
+
+
+-----------------------------
+LÄGG TILL: ARIA-anpassning, social-media-templates.
+GÖRA EN TLDR-variant av min text....
+
+Tjenis!
+Ok, jag skrev detta innan videosamtalet där du sa "ca 200 ord". Jag tolkade dig som att du kanske gärna fick längre texter eftersom att du skrev just "minst". Du får väl skumma igenom...
+
+
+
+
+Till att börja med: jag var inte särskilt taggad på att använda någon CSS-enhancer såsom SASS eller Tailwind för detta projekt då jag fortfarande vill få mer erfarenhet av vanilla webbutveckling innan jag börjar använda verktyg. Tror att jag kommer ha lättare att veta vad jag själv har för preferenser framöver om jag får upptäcka på egen hand vad som funkar mer och mindre bra med att skriva så mycket som möjligt från grunden. Jag behöver "göra många misstag", det är så jag fungerar inlärningsmässigt. 
+
+Så jag rev igång utan att bry mig om dessa verktyg. Däremot hämtade jag inspiration från det lilla jag lärt om BEM innan i min namngivning av element i min HTML. Egentligen känner jag samma sak där, att jag helst vill försöka skapa ett eget system för att ev upptäcka varför det inte funkar, och sedan låna smarta idéer från annat håll. Genom denna uppgift har jag redan upptäckt en del sådana saker, när mina klass-namn börjar bli sjuhelsikes inlindade i varandra, när det börjar bli oklart om det är tydligare att förlänga namnet ytterligare när nya element läggs till eller försöka bryta och underdela i nya namn, t.ex. Det är helt klart en av de saker jag känt förbättringspotential kring, att bli smartare och smidigare i namngivningarna, och kommer nog vilja studera andras idéer mer framöver för att hämta inspiration. 
+
+Vad gäller metod för layout var jag innan uppgiften säker på att jag åtminstone någonstans ville testa skapa med grid, eftersom det är nytt för mig. Mobilversionen bygge i stort uteslutande på vertikalt flöde varför jag lät den bestå av vanliga block med inslag av flexbox. I desktopvarianten tänkte jag först att jag skulle göra hela med grid för att maxa inlärning kring det, men insåg sedan att det skulle bli väldigt mycket extrajobb när jag redan hade all grund i block och flex. Det var betydligt enklare att utöka "mobile" med redan befintliga display-värden (och i vissa fall tweaka med fler flexboxes etc). Däremot testade jag implementera grid i "play online/with friends"-avsnitten som kändes tacksamma för den layouten. Oklart om jag valt att göra det om inte för övningen, eftersom att det också hade fungerat bra med flexbox. Men glad att jag gjorde det som sagt för övningens skull.
+
+Så till struktur av kod:
+Jag slängde upp HTML först och främst i "kronologisk ordning" utifrån designmallen för mobilversionen. Byggde alla element utan CSS först, och fortsatte med styling sedan. Försökte att använda enbart semantiskt betydelsebärande element i så stor utsträckning som möjligt, men insåg att jag skulle behöva en del extra div:ar för att hantera layout. Varje avsnitt har en egen <section>, och ibland räckte det att använda den som container, ibland fick jag se mig besegrad och slänga in en <div> för flexbox etc. Kanske går att lösa utan men jag lät det vara så.
+Sedan satte jag igång med styling uppifrån och ner för mobil. När mobilversionen såg bra ut började jag utöka till layout motsvarande den större layouten från designmallen. Det var inga större problem, och valet av "mobile first" kändes rimligt och smidigt när jag enbart kunde utöka vissa regler för att skapa önskad design (vilket såklart också var tanken med att använda "mobile first"). Däremot blev det lite klyddigare när jag började pilla med mellanlägen. Detta var inte så genomtänkt av mig innan. Kändes smidigast att definiera media queries för mellanlägen utifrån ett intervall (ex 700px <= width < 1200px) istället för med min-width, för då riskerade jag inte att skapa nya värden som påverkade även för efterkommande media queries. Men i vissasa fall blev mina nya värden samma som i senare media queries, och då fick jag städa upp i koden för att de inte skulle upprepas. Denna process kändes inte helt clean för mig, kan nog göra det smidigare med mer erfarenhet. 
+
+Vad gäller media queries så provade jag ha dem i anslutning till de element de syftar till istället för ihopbuntat i t.ex. slutet av CSS-filen. Vet dock inte om jag föredrar detta. Utan SASS ser koden ganska grötig ut, och jag är också lite inkonsekvent då jag ibland har mina queries direkt efter varje selector och ibland buntar jag ihop ett gäng i taget. Det berodde lite på hur koden såg ut i varje fall. Men jag valde att göra såhär för att jag trodde att det skulle vara lättast att göra utökningar från "mobile first" när jag hade originalkoden nära intill, vilket till stor del stämde. 
+
+Längst överst i CSS-filen valde jag att "nollställa" några egenskaper för hela dokumentet med den universella selektorn. Kändes som att det skulle bli renare och mer tydligt för mig att jobba med stylingen på detta vis. Jag angav också ett gäng generella regler för element längst upp, som ett försöka att minimera upprepning (t.ex. stylig för hur en knapp skulle se ut, då jag upplevde att de flesta knappar hade mycket gemensamt, men fick anpassas lite var för sig med mer specifika selektorer). 
+
+Jag valde att inte experimentera med olika CSS-filer då jag först och främst vill utforska hur det är att skriva längre CSS-filer och hur hanteringen av dessa blir då. Upplever att min mängd CSS i denna uppgift fortfarande känns hanterbar, men samtidigt lämnar lite att önska kring överskådlighet. Oklar huruvida multipla CSS-filer är en del av lösningen.
+
+Jag jobbade ganska mycket med att försöka följa DRY-principen. Upptäckte t.ex. att jag upprepat värden för font-size i onödan på flera ställen, så städade upp det i efterhand. Men känner fortfarande att jag inte är hundra på om jag gjort detta på bästa sättet. Hoppas att jag inte har några rena onödiga upprepningar just nu, men i vissa fall skulle jag vilja jobba smartare, som t.ex. att kunna lägga typ font-size +4px på samtliga element i en sektion efter en media query, istället för att behöva gå in och manuellt ändra rubriker, brödtext, liten text etc som alla har olika värden. Kändes lite svårt att jobba smidigt med font-storlekar på denna sida för det varierade så oerhört mycket på sidan, och det som var en rubrik på en del kunde vara mindre än det som var innehållstext på en annan del.
+
+Jag försökte att undvika att använda hårdkodade pixelmått i bredd, för att skapa snygg responsivitet. Blev ofta procent-marginaler i dessa fall. I höjdled använde jag mer ofta pixelmått så länge jag tyckte det såg snyggt ut, då jag upplevde att det inte behövde förändras på samma sätt för att sidan skulle vara snygg och responsiv. 
+
+Nåt mer? Min semantiska ordning bygger på mobildesignen, vilket ibland krockar med hur det ser ut på desktop. T.ex. knapparna under Hero-bilden har omvänd ordning. Vet inte om det är smartast att använda mobilversionen som utgångspunkt, men gjorde det eftersom den generellt var tydligare strukturerad "kronologiskt".

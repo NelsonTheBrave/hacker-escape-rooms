@@ -4,10 +4,9 @@
 :root {
   /* Variables for color */
   --purple: #011827;
-  --red: rgba(227, 23, 10, 1);
-  --blue: rgba(138, 207, 229, 1);
-  /* Variables for media queries */
-  --medium: 800;
+  --red: #e3170a;
+  --lightBlue: #8acfe5;
+  --darkBlue: #36769d;
 }
 
 /* Initial styling and reset */
@@ -26,7 +25,7 @@ a {
   text-decoration: inherit;
 }
 a:hover {
-  color: var(--blue);
+  color: var(--lightBlue);
 }
 /* Unnecessary? */
 img {
@@ -50,6 +49,7 @@ button:hover {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
 
 /* ███████████████ HEADER ███████████████ */
@@ -101,18 +101,22 @@ header h1 {
     margin: 35px 0 0 24px;
   }
 }
-
+@media screen and (min-width: 1750px) {
+  header h1 {
+    font-size: 50px;
+    margin: 28px 0 0 24px;
+  }
+}
 .navBar {
   display: none;
 }
 @media screen and (min-width: 1200px) {
   .navBar {
-    display: block;
+    display: unset;
   }
 }
 
 .navBar__list {
-  margin-top: 58px;
   display: flex;
   justify-content: space-evenly;
   width: 80%;
@@ -123,7 +127,14 @@ header h1 {
   font-size: 24px;
   font-weight: 700;
 }
-
+@media screen and (min-width: 1750px) {
+  .navBar__list {
+    margin: 50px auto 0 auto;
+  }
+  .navBar__list li {
+    font-size: 28px;
+  }
+}
 /* ███████████████ MAIN ███████████████ */
 .topImageSmall {
   margin-bottom: 36px;
@@ -136,7 +147,6 @@ header h1 {
     height: 70vw;
     object-fit: cover;
   }
-
 }
 @media screen and (min-width: 700px) {
   .topImageSmall {
@@ -144,7 +154,6 @@ header h1 {
     min-height: 450px;
     object-fit: cover;
   }
-
 }
 @media screen and (min-width: 1200px) {
   .topImageSmall {
@@ -161,7 +170,7 @@ header h1 {
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BUTTON BAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
 .buttons__onsiteBtn {
   color: var(--purple);
-  background: var(--blue);
+  background: var(--lightBlue);
   margin-top: 25px;
 }
 
@@ -171,7 +180,7 @@ header h1 {
   font-size: 16px;
   font-weight: 700;
   text-decoration: underline;
-  color: rgba(54, 118, 157, 1);
+  color: var(--darkBlue);
   background-color: inherit;
 }
 
@@ -216,7 +225,6 @@ header h1 {
   }
 }
 
-
 .quote__head {
   margin: 0 0 0 21px;
   width: 73px;
@@ -247,10 +255,11 @@ header h1 {
   font-size: 18px;
 }
 @media screen and (min-width: 700px) {
-.quote__head {
-  width: 96px;
-  height: 96px;
-}}
+  .quote__head {
+    width: 96px;
+    height: 96px;
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .quotes {
@@ -259,7 +268,7 @@ header h1 {
     margin: 0 auto;
   }
   .quote {
-    margin-top: 70px;
+    margin: 70px auto 0 auto;
   }
   .quote__head {
     width: 96px;
@@ -389,6 +398,11 @@ header h1 {
   margin-top: 12px;
   font-size: 28px;
 }
+@media screen and (min-width: 1750px) {
+  .popularChallenges__challenge__title {
+    margin-top: 20px;
+  }
+}
 
 .popularChallenges__challenge__rating {
   display: flex;
@@ -405,10 +419,10 @@ header h1 {
   background-repeat: no-repeat;
 }
 .star--filled {
-  background: url(img/filledStar.png);
+  background: url(img/filledStar.svg);
 }
 .star--empty {
-  background: url(img/emptyStar.png);
+  background: url(img/emptyStar.svg);
 }
 
 .popularChallenges__challenge__rating__participants {
@@ -455,6 +469,13 @@ header h1 {
   color: white;
   font-size: 16px;
 }
+@media screen and (min-width: 1750px) {
+  .popularChallenges__challenge__button {
+    width: 210px;
+    height: 55px;
+    font-size: 18px;
+  }
+}
 
 /* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BUTTON BAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
 
@@ -480,8 +501,8 @@ header h1 {
 .ourStory__btn {
   margin-top: 60px;
   background-color: var(--purple);
-  color: var(--blue);
-  border: 2px solid var(--blue);
+  color: var(--lightBlue);
+  border: 2px solid var(--lightBlue);
 }
 @media screen and (min-width: 1200px) {
   .ourStory {
@@ -643,7 +664,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3;
-    font-size: 22px;
     padding-right: 20%;
   }
   .footerTitle {
