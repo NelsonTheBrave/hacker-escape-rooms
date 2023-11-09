@@ -20,7 +20,7 @@ function closePopup(event) {
   if (
     event.target.nodeName === "BUTTON" ||
     event.target.nodeName == "A" ||
-    event.target.width > 1200
+    event.target.width > 900
   ) {
     navBar.setAttribute("class", "navBar");
   }

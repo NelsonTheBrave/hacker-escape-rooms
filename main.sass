@@ -71,7 +71,7 @@ header
     @media (min-width: 700px)
         height: 16vw
         min-height: 144px
-    @media screen and (min-width: 1200px)
+    @media (min-width: 900px)
         height: 216px
     div
         display: flex
@@ -101,13 +101,13 @@ header
             width: 51px
             height: 32px
             margin: 2px 20px 0 auto
-            @include screen-1200
+            @media (min-width: 900px)
                 display: none
 
     // ░░░░░░░░░░░░░░░ NAVIGATION BAR ░░░░░░░░░░░░░░░
     .navBar
         display: none
-        @media screen and (min-width: 1200px)
+        @media screen and (min-width: 900px)
             display: unset
             &__close-button
                 display: none
@@ -124,7 +124,7 @@ header
                     @media screen and (min-width: 1750px)
                         font-size: 28px
         &--popup
-            @media (max-width: 1199px)
+            @media (max-width: 899px)
                 background-color: $purple
                 width: calc( 100vw - 44px )
                 height: calc( 100vh - 44px )
