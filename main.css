@@ -43,6 +43,14 @@ body {
   font-size: 18px;
 }
 
+html {
+  opacity: 1;
+}
+html.--transparant {
+  transition: opacity linear 200ms;
+  opacity: 0.5;
+}
+
 header {
   height: 144px;
   background-color: #011827;
@@ -63,7 +71,7 @@ header {
 header div {
   display: flex;
 }
-header .logo {
+header div .logo {
   height: 82px;
   width: 128px;
   font-family: "Monofett", monospace;
@@ -73,23 +81,34 @@ header .logo {
   margin: 0px 0 0 27px;
   padding: 26px 0px 5px 5px;
 }
-header h1 {
-  width: 78px;
+header div h1 {
+  width: 80px;
   font-size: 24px;
   font-weight: 700;
   margin-left: 13px;
 }
 @media screen and (min-width: 1200px) {
-  header h1 {
+  header div h1 {
     font-size: 40px;
     width: fit-content;
     margin: 35px 0 0 24px;
   }
 }
 @media screen and (min-width: 1750px) {
-  header h1 {
+  header div h1 {
     font-size: 50px;
     margin: 28px 0 0 24px;
+  }
+}
+header div .navbar-button {
+  background: url(img/menu-bar.png);
+  width: 51px;
+  height: 32px;
+  margin: 2px 20px 0 auto;
+}
+@media (min-width: 1200px) {
+  header div .navbar-button {
+    display: none;
   }
 }
 header .navBar {
@@ -99,25 +118,86 @@ header .navBar {
   header .navBar {
     display: unset;
   }
-}
-header .navBar__list {
-  display: flex;
-  justify-content: space-evenly;
-  width: 80%;
-  margin: 58px auto 0 auto;
-}
-@media screen and (min-width: 1750px) {
+  header .navBar__close-button {
+    display: none;
+  }
   header .navBar__list {
-    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 58px auto 0 auto;
   }
 }
-header .navBar__list li {
-  font-size: 24px;
-  font-weight: 700;
+@media screen and (min-width: 1200px) and (min-width: 1750px) {
+  header .navBar {
+    margin: 50px auto 0 auto;
+  }
+  header .navBar li {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
-@media screen and (min-width: 1750px) {
-  header .navBar__list li {
+@media screen and (min-width: 1200px) and (min-width: 1750px) and (min-width: 1750px) {
+  header .navBar li {
     font-size: 28px;
+  }
+}
+@media (max-width: 1199px) {
+  header .navBar--popup {
+    background-color: #011827;
+    width: calc(100vw - 44px);
+    height: calc(100vh - 44px);
+    position: fixed;
+    top: 22px;
+    left: 22px;
+    outline: 22px rgba(255, 255, 255, 0.5019607843) solid;
+    animation: popup-background 100ms linear;
+  }
+  @keyframes popup-background {
+    0% {
+      width: calc(100vw - 54px);
+      height: calc(100vh - 54px);
+      top: 27px;
+      left: 27px;
+      outline: 27px rgba(255, 255, 255, 0.5019607843) solid;
+      opacity: 0.8;
+    }
+    100% {
+      width: calc(100vw - 44px);
+      height: calc(100vh - 44px);
+      position: fixed;
+      top: 22px;
+      left: 22px;
+      outline: 22px rgba(255, 255, 255, 0.5019607843) solid;
+      opacity: 1;
+    }
+  }
+  header .navBar--popup button {
+    background: url(img/close.png) no-repeat;
+    width: 40px;
+    height: 41px;
+    margin-left: calc(100% - 41px - 28px);
+    margin-top: 25px;
+  }
+  header .navBar--popup ul {
+    position: relative;
+    top: calc(50% - 66px);
+    transform: translateY(-50%);
+    text-align: center;
+  }
+  header .navBar--popup ul li {
+    font-weight: 700;
+    font-size: 36px;
+    padding: 2.7vh 0;
+    animation: list-item-sizes 100ms linear;
+  }
+  @keyframes list-item-sizes {
+    0% {
+      font-size: 35.3px;
+    }
+    100% {
+      font-size: 36px;
+    }
   }
 }
 

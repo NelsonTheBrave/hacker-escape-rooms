@@ -16,14 +16,16 @@
       <div>
         <span class="logo" role="img" aria-label="Logotype of company">ESC</span>
       <h1>Hacker Escape Rooms</h1>
+      <button class="navbar-button"></button>
     </div>
       <!-- ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ NAVBAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -->
       <nav class="navBar">
+        <button class="navBar__close-button"></button>
         <ul class="navBar__list">
-            <li><a href="">Play online</a></li>
-            <li><a href="">Play on-site</a></li>
-            <li><a href="">The story</a></li>
-            <li><a href="">Contact us</a></li>
+            <li><a href="#play-online">Play online</a></li>
+            <li><a href="#play-on-site">Play on-site</a></li>
+            <li><a href="#our-story">The story</a></li>
+            <li><a href="#contact-us">Contact us</a></li>
         </ul>
       </nav>
     </header>
@@ -187,7 +189,7 @@
       <button class="buttons__onlineBtn">Online Challenges</button>
     </div>
       <!-- ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ OUR STORY ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ -->
-      <section class="ourStory-container">
+      <section class="ourStory-container" id="our-story">
         <p class="ourStory-container__text">
           Quodsi haberent magnalia inter potentiam et divitias, et non illam
           quidem haec eo spectant haec quoque vos omnino desit illud quo solo
@@ -205,6 +207,7 @@
           src="img/nesa-by-makers-IgUR1iX0mqM-unsplash 1.png"
           alt=""
           class="imgAbovePlayWithFriends"
+          id="play-on-site"
         />
 
       <section class="playWithFriends">
@@ -225,12 +228,13 @@
       src="img/kelly-sikkema-YK0HPwWDJ1I-unsplash 1.png"
       alt=""
       class="imgAbovePlayOnline"
+      id="play-online"
     />
 
 
       <section class="PLAY-ONLINE-CONTAINER">
         
-        <h3 class="PLAY-ONLINE-CONTAINER__title">
+        <h3 class="PLAY-ONLINE-CONTAINER__title" id="#contact-us">
           Play online or visit our venue for one of our 25 escape rooms
         </h3>
         <p class="PLAY-ONLINE-CONTAINER__text">
@@ -270,5 +274,7 @@
         </ul>
       <!-- </div>?? -->
     </footer>
+
+    <script src="main.js"></script>
   </body>
 </html>
