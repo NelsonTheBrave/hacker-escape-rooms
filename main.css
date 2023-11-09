@@ -45,6 +45,7 @@ body {
 
 html {
   opacity: 1;
+  scroll-behavior: smooth;
 }
 html.--transparant {
   transition: opacity linear 200ms;

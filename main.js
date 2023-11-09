@@ -13,9 +13,9 @@ function openPopup() {
     html.classList.remove("--transparant");
     navBar.setAttribute("class", "navBar--popup");
   }, 200);
-
   navBar.addEventListener("click", closePopup);
 }
+
 function closePopup(event) {
   if (
     event.target.nodeName === "BUTTON" ||
