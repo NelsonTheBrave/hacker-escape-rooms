@@ -1,20 +1,23 @@
 ███████████████  ██████████████████████████████  ██████████████████████████████  ███████████████
 ███████████████ ORDLIG INLÄMNING ███████████████
 
-Uppgiften innefattar även en skriftlig inlämning samt muntlig avstämning där studenten ska motivera val av verktyg och hur man valt att strukturera sin kod.
-
-Motivera skriftligt val av tekniker och verktyg
-Beskriv skriftligt hur du strukturerat din kod
-
-Text där man motiverar val av tekniker och hur man strukturerat sin kod, minst ca 200 ord
-
-
 -----------------------------
-LÄGG TILL: ARIA-anpassning, social-media-templates.
 GÖRA EN TLDR-variant av min text....
 
+
+
 Tjenis!
-Ok, jag skrev detta innan videosamtalet där du sa "ca 200 ord". Jag tolkade dig som att du kanske gärna fick längre texter eftersom att du skrev just "minst". Du får väl skumma igenom...
+Ok, jag skrev detta innan videosamtalet där du sa "ca 200 ord". Jag tolkade dig som att du kanske gärna fick längre texter eftersom att du skrev just "minst". Du får väl strunta i brödtexten och läsa min TL;DR istället:
+
+TL;DR
+
+HTML - utgick ifrån designen för mobil när jag skapade min HTML då den kändes tydligast och jag planerade att arbeta "mobile first". Inspirerades av BEM i namngivning av klasser, utan att nödvändigtvis följa det strikt. Strävade efter att använda semantiskt betydelsefulla element så ofta som möjligt, men finns förbättringspotential helt klart. Kanske överanvänt <section>. Kollade lite på ARIA också, och implementerade det delvis, främst i min <span>-element, men kände att jag inte orkade lägga mer energi på det.
+
+CSS - Undvek CSS-enhancers för att fortsätta få mer erfarenhet av Vanilla CSS. Block i kombination med Flexbox kändes bra för mobil, men hade som mål att utmana mig med lite grid någonstans i uppgiften också. Strävade efter att följa DRY-principen, vilket innebar att jag fick gå tillbaka och städa i kod ibland när jag hade upprepat mig ändå. Ville undvika hårdkodade pixelmått för bredder, för att göra sidan mer responsiv i mellanlägen. Känner mig överlag OK nöjd med min CSS men den känns lite väl rörig och oöverskådlig. Testar nog SASS nästa gång. 
+
+
+
+
 
 
 

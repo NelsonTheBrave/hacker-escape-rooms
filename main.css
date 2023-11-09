@@ -1,15 +1,4 @@
-/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Monofett&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
-
-:root {
-  /* Variables for color */
-  --purple: #011827;
-  --red: #e3170a;
-  --lightBlue: #8acfe5;
-  --darkBlue: #36769d;
-}
-
-/* Initial styling and reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -17,17 +6,19 @@
   border: 0;
   font: inherit;
 }
+
 li {
   list-style: none;
 }
+
 a {
   color: inherit;
   text-decoration: inherit;
 }
 a:hover {
-  color: var(--lightBlue);
+  color: #8acfe5;
 }
-/* Unnecessary? */
+
 img {
   display: block;
   width: 100%;
@@ -52,32 +43,27 @@ body {
   font-size: 18px;
 }
 
-/* ███████████████ HEADER ███████████████ */
-
 header {
   height: 144px;
-  background-color: var(--purple);
+  background-color: #011827;
   color: white;
   padding-top: 26px;
 }
-@media screen and (min-width: 700px) {
+@media (min-width: 700px) {
   header {
     height: 16vw;
     min-height: 144px;
   }
 }
-
 @media screen and (min-width: 1200px) {
   header {
     height: 216px;
   }
 }
-
 header div {
   display: flex;
 }
-
-.logo {
+header .logo {
   height: 82px;
   width: 128px;
   font-family: "Monofett", monospace;
@@ -87,7 +73,6 @@ header div {
   margin: 0px 0 0 27px;
   padding: 26px 0px 5px 5px;
 }
-
 header h1 {
   width: 78px;
   font-size: 24px;
@@ -107,42 +92,39 @@ header h1 {
     margin: 28px 0 0 24px;
   }
 }
-.navBar {
+header .navBar {
   display: none;
 }
 @media screen and (min-width: 1200px) {
-  .navBar {
+  header .navBar {
     display: unset;
   }
 }
-
-.navBar__list {
+header .navBar__list {
   display: flex;
   justify-content: space-evenly;
   width: 80%;
   margin: 58px auto 0 auto;
 }
-
-.navBar__list li {
+@media screen and (min-width: 1750px) {
+  header .navBar__list {
+    margin: 50px auto 0 auto;
+  }
+}
+header .navBar__list li {
   font-size: 24px;
   font-weight: 700;
 }
 @media screen and (min-width: 1750px) {
-  .navBar__list {
-    margin: 50px auto 0 auto;
-  }
-  .navBar__list li {
+  header .navBar__list li {
     font-size: 28px;
   }
 }
-/* ███████████████ MAIN ███████████████ */
+
 .topImageSmall {
   margin-bottom: 36px;
 }
-.topImageLarge {
-  display: none;
-}
-@media screen and (max-width: 420px) {
+@media (max-width: 420px) {
   .topImageSmall {
     height: 70vw;
     object-fit: cover;
@@ -155,10 +137,16 @@ header h1 {
     object-fit: cover;
   }
 }
-@media screen and (min-width: 1200px) {
+@media (min-width: 1200px) {
   .topImageSmall {
     display: none;
   }
+}
+
+.topImageLarge {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
   .topImageLarge {
     display: block;
     height: 38.5vw;
@@ -167,143 +155,129 @@ header h1 {
   }
 }
 
-/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BUTTON BAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
+@media (min-width: 1200px) {
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  .buttons--translate {
+    transform: translateY(-35px);
+    margin-bottom: -30px;
+  }
+}
 .buttons__onsiteBtn {
-  color: var(--purple);
-  background: var(--lightBlue);
+  color: #011827;
+  background: #8acfe5;
   margin-top: 25px;
 }
-
+@media screen and (min-width: 1200px) {
+  .buttons__onsiteBtn {
+    margin: 0 auto 0 8.5px;
+    order: 2;
+  }
+}
 .buttons__onlineBtn {
   margin: 10px auto 0 auto;
   display: block;
   font-size: 16px;
   font-weight: 700;
   text-decoration: underline;
-  color: var(--darkBlue);
+  color: #36769d;
   background-color: inherit;
 }
-
 @media screen and (min-width: 1200px) {
-  .buttons {
-    display: flex;
-    justify-content: space-between;
-  }
-  .translateBtn {
-    transform: translateY(-35px);
-    margin-bottom: -30px;
-  }
-  .buttons__onsiteBtn {
-    margin: 0 auto 0 8.5px;
-    order: 2;
-  }
   .buttons__onlineBtn {
     margin: 0 8.5px 0 auto;
     font-size: 24px;
     text-decoration: none;
     color: white;
-    background-color: var(--red);
+    background-color: #e3170a;
     order: 1;
   }
 }
 
-/*  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ QUOTES ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
-
-/* ░░░░░░░░░░░░░░░ QUOTE 1 ░░░░░░░░░░░░░░░ */
-.quote {
+@media (min-width: 1200px) {
+  .quotes-section {
+    display: flex;
+    width: 87%;
+    margin: 0 auto;
+  }
+}
+.quotes-section .quote-container {
   display: flex;
   margin-top: 50px;
 }
-@media screen and (max-width: 420px) {
-  .quote {
+@media (max-width: 420px) {
+  .quotes-section .quote-container {
     display: block;
   }
 }
-@media screen and (700px <= width < 1200px) {
-  .quote {
+@media (700px < width < 1200px) {
+  .quotes-section .quote-container {
     margin: 50px 8%;
   }
 }
-
-.quote__head {
+@media (min-width: 1200px) {
+  .quotes-section .quote-container {
+    margin: 70px auto 0 auto;
+  }
+}
+.quotes-section .quote-container__head {
   margin: 0 0 0 21px;
   width: 73px;
   height: 72px;
 }
-@media screen and (max-width: 420px) {
-  .quote__head {
+@media (max-width: 420px) {
+  .quotes-section .quote-container__head {
     margin: 0 auto;
   }
 }
-
-.quote__quoteText {
+@media (700px < width < 1200px) {
+  .quotes-section .quote-container__head {
+    width: 96px;
+    height: 96px;
+  }
+}
+@media (min-width: 1200px) {
+  .quotes-section .quote-container__head {
+    width: 96px;
+    height: 96px;
+  }
+}
+@media (max-width: 420px) {
+  .quotes-section .quote-container__texts {
+    width: 85%;
+    margin: 20px auto 0 auto;
+  }
+}
+.quotes-section .quote-container__quoteText {
   margin-left: 22px;
   margin-right: 25px;
   font-style: italic;
   font-size: 24px;
 }
-@media screen and (max-width: 420px) {
-  .quote__texts {
-    width: 85%;
-    margin: 20px auto 0 auto;
-  }
-}
-
-.quote__name {
+.quotes-section .quote-container__name {
   margin-left: 21px;
   margin-top: 4px;
   font-size: 18px;
 }
-@media screen and (min-width: 700px) {
-  .quote__head {
-    width: 96px;
-    height: 96px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .quotes {
-    display: flex;
-    width: 87%;
-    margin: 0 auto;
-  }
-  .quote {
-    margin: 70px auto 0 auto;
-  }
-  .quote__head {
-    width: 96px;
-    height: 96px;
-  }
-  .quote__name {
+@media (min-width: 1200px) {
+  .quotes-section .quote-container__name {
     margin-top: 14px;
     max-width: 300px;
   }
 }
-
-/* ░░░░░░░░░░░░░░░ QUOTE 2 ░░░░░░░░░░░░░░░ */
-.quote2 {
+.quotes-section .quote-container.quote2 {
   display: none;
 }
-@media screen and (min-width: 1200px) {
-  .quote2 {
+@media (min-width: 1200px) {
+  .quotes-section .quote-container.quote2 {
     display: flex;
     margin-top: 70px;
   }
 }
 
-/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ POPULAR CHALLENGES ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
-.popularChallenges__title {
-  margin: 105px 20px 0 20px;
-  font-size: 32px;
-  text-align: center;
-}
-@media screen and (min-width: 1200px) {
-  .popularChallenges__title {
-    font-size: 36px;
-  }
-}
-
-.popularChallenges {
+.challenges-container {
   padding-bottom: 19px;
   padding-left: 10%;
   padding-right: 2%;
@@ -312,15 +286,15 @@ header h1 {
   scroll-snap-type: x mandatory;
   gap: 5%;
 }
-@media screen and (min-width: 700px) {
-  .popularChallenges {
+@media (700px < width < 1200px) {
+  .challenges-container {
     padding-left: 15%;
     padding-right: 20%;
     gap: 2%;
   }
 }
-@media screen and (min-width: 1200px) {
-  .popularChallenges {
+@media (min-width: 1200px) {
+  .challenges-container {
     width: fit-content;
     overflow-x: auto;
     padding-left: 0px;
@@ -330,8 +304,8 @@ header h1 {
     gap: 0;
   }
 }
-@media screen and (min-width: 1750px) {
-  .popularChallenges {
+@media (min-width: 1750px) {
+  .challenges-container {
     padding-left: 0px;
     padding-right: 0px;
     justify-content: space-evenly;
@@ -339,8 +313,17 @@ header h1 {
     gap: 0;
   }
 }
-
-.popularChallenges__challenge {
+.challenges-container__title {
+  margin: 105px 20px 0 20px;
+  font-size: 32px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .challenges-container__title {
+    font-size: 36px;
+  }
+}
+.challenges-container__challenge {
   width: 85%;
   max-width: 400px;
   flex: none;
@@ -351,99 +334,90 @@ header h1 {
   scroll-snap-align: center;
 }
 @media screen and (min-width: 700px) {
-  .popularChallenges__challenge {
+  .challenges-container__challenge {
     max-width: 520px;
     margin: 44px 5% 0 5%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .popularChallenges__challenge {
+  .challenges-container__challenge {
     max-width: 29%;
     margin: 87px 10px 77px 0px;
   }
 }
 @media screen and (min-width: 1750px) {
-  .popularChallenges__challenge {
+  .challenges-container__challenge {
     max-width: 29%;
     margin: 87px 10px 77px 0px;
   }
 }
-
-.popularChallenges__challenge__img {
+.challenges-container__challenge__img {
   width: 100%;
   border-radius: 8px 8px 0 0;
 }
-
-.popularChallenges__challenge__lowerWrapper {
+.challenges-container__challenge__lowerWrapper {
   margin: 0px auto;
   padding-left: 17px;
   padding-bottom: 12px;
 }
 @media screen and (700px <= width < 1200px) {
-  .popularChallenges__challenge__lowerWrapper {
+  .challenges-container__challenge__lowerWrapper {
     padding-right: 10px;
     padding-bottom: 30px;
   }
 }
 @media screen and (min-width: 1750px) {
-  .popularChallenges__challenge__lowerWrapper {
+  .challenges-container__challenge__lowerWrapper {
     margin: 0px auto;
     padding-left: 47px;
     padding-right: 25px;
     padding-bottom: 30px;
   }
 }
-
-.popularChallenges__challenge__title {
+.challenges-container__challenge__title {
   margin-top: 12px;
   font-size: 28px;
 }
 @media screen and (min-width: 1750px) {
-  .popularChallenges__challenge__title {
+  .challenges-container__challenge__title {
     margin-top: 20px;
   }
 }
-
-.popularChallenges__challenge__rating {
+.challenges-container__challenge__rating {
   display: flex;
 }
-
-.popularChallenges__challenge__rating__stars {
+.challenges-container__challenge__rating__stars {
   display: flex;
 }
-
-.popularChallenges__challenge__rating__stars i {
+.challenges-container__challenge__rating__stars .star {
   display: block;
   width: 23px;
   margin-right: 3px;
-  background-repeat: no-repeat;
 }
-.star--filled {
-  background: url(img/filledStar.svg);
+.challenges-container__challenge__rating__stars .star.--filled {
+  background: url(img/filledStar.svg) no-repeat;
 }
-.star--empty {
-  background: url(img/emptyStar.svg);
+.challenges-container__challenge__rating__stars .star.--empty {
+  background: url(img/emptyStar.svg) no-repeat;
 }
-
-.popularChallenges__challenge__rating__participants {
+.challenges-container__challenge__rating__participants {
   display: inline;
   font-size: 14px;
   margin-left: 10px;
 }
 @media screen and (min-width: 1200px) {
-  .popularChallenges__challenge__rating__participants {
+  .challenges-container__challenge__rating__participants {
     margin-right: 11px;
     margin-left: auto;
   }
 }
-
-.popularChallenges__challenge__text {
+.challenges-container__challenge__text {
   margin-top: 23px;
   margin-right: 10px;
   font-size: 18px;
 }
 @media screen and (700px <= width < 1200px) {
-  .popularChallenges__challenge__text {
+  .challenges-container__challenge__text {
     margin-top: 23px;
     margin-right: 10px;
     font-size: 22px;
@@ -451,131 +425,131 @@ header h1 {
   }
 }
 @media screen and (min-width: 1750px) {
-  .popularChallenges__challenge__text {
+  .challenges-container__challenge__text {
     margin-top: 23px;
     margin-right: 10px;
     font-size: 22px;
     padding-bottom: 60px;
   }
 }
-
-.popularChallenges__challenge__button {
+.challenges-container__challenge__button {
   margin-top: 25px;
   margin-right: 17px;
   width: 180px;
   height: 44px;
-  background-color: var(--red);
-  /* border-radius: 8px; HUUUUUUH!? */
+  background-color: #e3170a;
   color: white;
   font-size: 16px;
 }
 @media screen and (min-width: 1750px) {
-  .popularChallenges__challenge__button {
+  .challenges-container__challenge__button {
     width: 210px;
     height: 55px;
     font-size: 18px;
   }
 }
 
-/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BUTTON BAR ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
-
-/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ OUR STORY ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
-.ourStory {
+.ourStory-container {
   color: white;
   margin-top: 56px;
   padding-top: 95px;
   padding-bottom: 91px;
-  background-color: var(--purple);
+  background-color: #011827;
 }
-.ourStory__text {
-  font-size: 28px;
-  text-align: center;
-  margin: 0 20px;
-}
-@media screen and (min-width: 700px) {
-  .ourStory__text {
-    margin: 0 15%;
-  }
-}
-
-.ourStory__btn {
-  margin-top: 60px;
-  background-color: var(--purple);
-  color: var(--lightBlue);
-  border: 2px solid var(--lightBlue);
-}
-@media screen and (min-width: 1200px) {
-  .ourStory {
+@media (min-width: 1200px) {
+  .ourStory-container {
     margin-top: 87px;
     height: 500px;
     padding-top: 123px;
   }
-  .ourStory__text {
+}
+.ourStory-container__text {
+  font-size: 28px;
+  text-align: center;
+  margin: 0 20px;
+}
+@media (700px < width < 1200px) {
+  .ourStory-container__text {
+    margin: 0 15%;
+  }
+}
+@media (min-width: 1200px) {
+  .ourStory-container__text {
     display: block;
     width: 48%;
     margin: 0 auto;
   }
-  .ourStory__btn {
+}
+.ourStory-container__btn {
+  margin-top: 60px;
+  background-color: #011827;
+  color: #8acfe5;
+  border: 2px solid #8acfe5;
+}
+@media (min-width: 1200px) {
+  .ourStory-container__btn {
     margin-top: 42px;
   }
 }
 
-/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ PLAY WITH FRIENDS AND ONLINE ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ */
-.playWithFriendsAndOnline section {
+.PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER img {
+  height: 100%;
+  object-fit: cover;
+}
+.PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section {
   padding: 0 20px 64px 20px;
 }
-
-.playWithFriendsAndOnline h3 {
+.PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section h3 {
   margin-top: 30px;
   font-size: 32px;
   font-weight: 700;
 }
-.playWithFriendsAndOnline p {
+.PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section p {
   margin-top: 40px;
   font-size: 24px;
 }
-.playWithFriendsAndOnline button {
-  background-color: var(--red);
+.PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section button {
+  background-color: #e3170a;
   margin-top: 50px;
   margin-left: 0;
   color: white;
 }
-@media screen and (800px <= width < 1200px) {
-  .playWithFriendsAndOnline {
+@media (800px <= width < 1200px) {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER {
     display: grid;
     grid-template-columns: 1.8fr 1fr 1fr 1.8fr;
     grid-template-rows: 37.5vw 37.5vw;
     margin-bottom: 103px;
   }
-  .playWithFriendsAndOnline img {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER img {
     height: 100%;
     object-fit: cover;
   }
-  .imgAbovePlayWithFriends {
-    grid-column: 1 / 4;
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER .imgAbovePlayWithFriends {
+    grid-column: 1/4;
   }
-  .imgAbovePlayOnline {
-    grid-column: 2 / 5;
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER .imgAbovePlayOnline {
+    grid-column: 2/5;
   }
-  .playOnline {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER .PLAY-ONLINE-CONTAINER {
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
-  .playWithFriendsAndOnline section {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section {
     width: 90%;
     margin: auto;
     padding: 0;
   }
-  .playWithFriendsAndOnline h3 {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section h3 {
     margin-top: 0;
     font-size: 20px;
   }
-  .playWithFriendsAndOnline p {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section p {
     margin-top: 25px;
     font-size: 18px;
   }
-  .playWithFriendsAndOnline button {
-    background-color: var(--red);
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section button {
+    background-color: #e3170a;
     margin-top: 25px;
     margin-left: 10%;
     padding: 0 0;
@@ -585,144 +559,135 @@ header h1 {
     width: 180px;
   }
 }
-
-@media screen and (min-width: 1200px) {
-  .playWithFriendsAndOnline {
+@media (min-width: 1200px) {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 37.5vw 37.5vw;
     margin-bottom: 183px;
   }
-  .playWithFriendsAndOnline img {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER img {
     height: 100%;
     object-fit: cover;
   }
-  .imgAbovePlayWithFriends {
-    grid-column: 1 / 2;
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER .imgAbovePlayWithFriends {
+    grid-column: 1/2;
   }
-  .imgAbovePlayOnline {
-    grid-column: 2 / 3;
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER .imgAbovePlayOnline {
+    grid-column: 2/3;
   }
-  .playOnline {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER .PLAY-ONLINE-CONTAINER {
+    grid-column: 1/2;
+    grid-row: 2/3;
   }
-  .playWithFriendsAndOnline section {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section {
     width: 65%;
     margin: auto;
     padding: 0;
   }
-  .playWithFriendsAndOnline h3 {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section h3 {
     margin-top: 0;
   }
-  .playWithFriendsAndOnline p {
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section p {
     margin-top: 25px;
     font-size: 24px;
   }
-  .playWithFriendsAndOnline button {
-    background-color: var(--red);
+  .PLAY-WITH-FRIENDS-AND-ONLINE-CONTAINER section button {
+    background-color: #e3170a;
     margin-top: 25px;
     margin-left: 0;
     color: white;
   }
 }
 
-/* ███████████████ FOOTER ███████████████ */
-
-footer {
-  background-color: var(--purple);
+.FOOTER {
+  background-color: #011827;
   margin-top: 38px;
   color: white;
   padding: 64px 20px 70px 20px;
   font-size: 18px;
 }
-.footerTitle {
+.FOOTER__title {
   font-weight: 700;
 }
-
-.footerText {
+.FOOTER__text {
   margin-top: 7px;
 }
-
-.links__title {
+.FOOTER .links__title {
   margin-top: 40px;
   font-weight: 700;
 }
-.links__list {
+.FOOTER .links__list {
   margin-top: 7px;
 }
-
-.followUs__title {
+.FOOTER .followUs__title {
   margin-top: 47px;
   font-weight: 700;
 }
-.followUs__list {
+.FOOTER .followUs__list {
   margin-top: 7px;
 }
 @media screen and (min-width: 700px) {
-  footer {
+  .FOOTER {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 3;
     padding-right: 20%;
   }
-  .footerTitle {
+  .FOOTER__title {
     grid-column: 1/3;
     padding-left: 5%;
   }
-  .footerText {
+  .FOOTER__text {
     margin-top: 7px;
     grid-row: 2;
     grid-column: 1/3;
     padding-left: 5%;
   }
-  .links__title {
+  .FOOTER .links__title {
     margin-top: 40px;
     grid-row: 3;
     grid-column: 1;
     padding-left: 10%;
   }
-  .links__list {
+  .FOOTER .links__list {
     margin-top: 7px;
     grid-row: 4;
     grid-column: 1;
     padding-left: 10%;
   }
-
-  .followUs__title {
+  .FOOTER .followUs__title {
     grid-column: 2;
     grid-row: 3;
     margin-top: 40px;
     padding-left: 20%;
   }
-  .followUs__list {
+  .FOOTER .followUs__list {
     grid-row: 4;
     margin-top: 7px;
     padding-left: 20%;
   }
 }
-@media screen and (min-width: 1200px) {
-  footer {
+@media (min-width: 1200px) {
+  .FOOTER {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     padding: 146px 0 174px 0;
     font-size: 18px;
   }
-
-  .footerTitle {
+  .FOOTER__title {
     width: 65%;
     margin: 0 auto;
     grid-column: 1;
     grid-row: 1;
   }
-
-  .footerText {
+  .FOOTER__text {
     margin: 0 auto;
     width: 65%;
     margin-top: 7px;
     grid-column: 1;
   }
-  .links__title {
+  .FOOTER .links__title {
     margin-top: 0px;
     grid-row: 1;
     grid-column: 2;
@@ -730,28 +695,27 @@ footer {
     margin: 0 auto;
     padding-left: 0;
   }
-  .links__list {
+  .FOOTER .links__list {
     width: 40%;
     margin: 7px auto 0 auto;
     grid-column: 2;
     grid-row: 2;
     padding-left: 0;
   }
-
-  .followUs__title {
+  .FOOTER .followUs__title {
     grid-column: 3;
     grid-row: 1;
     margin-top: 0px;
     padding-left: 0;
   }
-  .followUs__list {
+  .FOOTER .followUs__list {
     grid-column: 3;
     grid-row: 2;
     padding-left: 0;
   }
 }
-@media screen and (min-width: 1750px) {
-  footer {
+@media (min-width: 1750px) {
+  .FOOTER {
     font-size: 22px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
