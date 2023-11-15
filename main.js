@@ -7,6 +7,7 @@ visualViewport.onresize = closePopup;
 
 //Event handlers
 function openPopup() {
+  document.querySelector('body').style.overflow = "hidden";
   const html = document.querySelector("html");
   html.setAttribute("class", "--transparant");
   setTimeout(() => {
@@ -14,7 +15,7 @@ function openPopup() {
     navBar.setAttribute("class", "navBar--popup");
   }, 200);
   navBar.addEventListener("click", closePopup);
-}
+}Kanal
 
 function closePopup(event) {
   if (
@@ -23,5 +24,7 @@ function closePopup(event) {
     event.target.width > 900
   ) {
     navBar.setAttribute("class", "navBar");
+  document.querySelector('body').style.overflow = "auto";
+
   }
 }
